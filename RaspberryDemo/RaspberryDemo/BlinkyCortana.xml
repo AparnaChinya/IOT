@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+  <CommandSet xml:lang="en-us" Name="UniversalAppCommandSet_en-us">
+    <CommandPrefix>apchin</CommandPrefix>
+    <Example>ON</Example>
+
+    <Command Name="Switch">
+      <Example>Switch On Light</Example>
+      <ListenFor>ON</ListenFor>
+      <ListenFor>OFF</ListenFor>
+      <ListenFor>Switch On Light</ListenFor>
+      <ListenFor>Switch Off Light</ListenFor>
+
+      <Feedback> On your command! </Feedback>
+      <Navigate/>
+    </Command>
+
+
+  </CommandSet>
+</VoiceCommands>
+
+
+
+

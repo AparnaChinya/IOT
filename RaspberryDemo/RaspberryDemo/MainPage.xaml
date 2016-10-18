@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="RaspberryDemo.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RaspberryDemo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="Header" Style="{StaticResource HeaderTextBlockStyle}" VerticalAlignment="Top" Grid.Row="0" Text="IoT - Blinky with Cortana" HorizontalAlignment="Center"/>
+        
+        <!--<Button Content="Listen" FontSize="30" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="ListenButton"  Visibility="Collapsed" Background="CornflowerBlue" />-->
+        <TextBlock x:Name="ReceiveData" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Style="{StaticResource SubheaderTextBlockStyle}"/>
+        <ToggleSwitch x:Name="BulbToggle" Width="100" Height="50" HorizontalAlignment="Center"  Grid.Row="2" VerticalAlignment="Bottom" Toggled="BulbToggle_Toggled" Visibility="Collapsed" ></ToggleSwitch>
+        
+        <Image x:Name="BulbImageOn" Stretch="Uniform" Grid.Row="2" Source="Assets/BulbOn.jpg" Opacity="0"   />
+        <Image x:Name="BulbImageOff" Stretch="Uniform" Grid.Row="2" Source="Assets/BulbOff.jpg"  Opacity="0" />
+        <TextBox x:Name="IPAddress" Grid.Row="3" TextWrapping="Wrap" PlaceholderText="IP Address!" Width="200" VerticalAlignment="Bottom" Style="{StaticResource AutoSuggestBoxTextBoxStyle }" Visibility="Collapsed" ></TextBox>
+        <Button Content="Connect" FontSize="30" Grid.Row="1" HorizontalAlignment="Center" x:Name="ConnectButton" VerticalAlignment="Top" Visibility="Collapsed" Click="ConnectButton_Click" Background="CornflowerBlue"  />
+        <TextBlock x:Name="ErrorMessage" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource SubheaderTextBlockStyle}"/>
+        <!--<TextBox x:Name="stringToSend" TextWrapping="Wrap" PlaceholderText="Hello World!" Grid.Row="1" Width="200" VerticalAlignment="Bottom" Style="{StaticResource AutoSuggestBoxTextBoxStyle }" Visibility="Collapsed" ></TextBox>
+        <Button Content="Send" FontSize="30" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="SendButton" Visibility="Collapsed" Click="SendButton_Click"  Background="CornflowerBlue" Margin="10" />-->
+        <TextBlock x:Name="SendMessage" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Style="{StaticResource SubheaderTextBlockStyle}" Visibility="Collapsed" />
+        
+
+
+    </Grid>
+</Page>
